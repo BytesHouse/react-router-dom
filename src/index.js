@@ -9,6 +9,7 @@ import App from './App';
 import LoginPage from "./pages/LoginPage";
 import Profile from "./pages/Profile";
 import News from "./pages/News";
+import MapPage from "./pages/MapPage";
 
 const router = createBrowserRouter([
     {
@@ -22,12 +23,20 @@ const router = createBrowserRouter([
             {
                 path: 'news',
                 element: <News/>
+            },
+            {
+                path: 'map',
+                element: <MapPage/>
             }
         ]
     },
     {
         path: '/login',
         element: <LoginPage/>
+    },
+    {
+        path: '/*',
+        element: <div>404</div>
     }
 ]);
 
